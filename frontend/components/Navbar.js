@@ -22,7 +22,7 @@ function Navbar(state) {
 
 function getHomeTab(state) {
     if (state.currentPage == 'Login') return `<a href="#">Home</a>`
-    return `<a href="#" onclick="changePage('Home')">Home</a>`
+    return `<a href="#" onclick="changePage('Home')">Homee</a>`
 }
 
 function getSubjectsTab(state) {
