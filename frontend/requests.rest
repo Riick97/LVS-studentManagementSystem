@@ -1,0 +1,125 @@
+### GET Lectures
+GET http://localhost:5000/lectures
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
+Accept: application/json
+
+### GET Subjects
+GET http://localhost:5000/subjects
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
+Accept: application/json
+
+
+### GET Students
+GET http://localhost:5000/students
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
+Accept: application/json
+
+### GET Admins
+GET http://localhost:5000/administrators
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
+Accept: application/json
+
+### GET Teachers
+GET http://localhost:5000/teachers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
+Accept: application/json
+
+
+
+### Login Student
+POST http://localhost:5000/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "username.username",
+    "password": "pasword"
+}
+
+### Login Teacher
+POST http://localhost:5000/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "Frank45",
+    "password": "Frank915"
+}
+
+###Login Admin
+POST http://localhost:5000/auth/login HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "JohhnyR62",
+    "password": "admin123"
+}
+
+
+### ADD Admin
+POST http://localhost:5000/administrators HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
+
+{
+    "subjects": [],
+    "studentId": "1143242",
+    "name": "anthony",
+    "lastName": "gracias",
+    "permissions": "S",
+    "email": "email.email",
+    "username": "usadsf",
+    "password": "pasword",
+    "semesters": []
+}
+
+
+### ADD Teacher
+POST http://localhost:5000/teachers/add HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
+
+{
+    "subjects": [],
+    "teacherId": "1143242",
+    "name": "Randy",
+    "lastName": "Ashwood",
+    "permissions": "T",
+    "email": "randy@email.com",
+    "username": "randy52",
+    "password": "randy092",
+    "semesters": []
+}
+
+### ADD students
+POST http://localhost:5000/students/add HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
+
+{
+    "subjects": [],
+    "studentId": "157243",
+    "name": "Gabriel",
+    "lastName": "Janner",
+    "permissions": "S",
+    "email": "Gabriel@email.com",
+    "username": "Gab623",
+    "password": "Gabriel-93",
+    "semesters": []
+}
+
+
+### ADD subjects
+
+POST http://localhost:5000/subjects/add HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
+
+{
+    "videos": [],
+    "teachers": [],
+    "enrolledStudents": [],
+    "lectures": [],
+    "name": "Software Engineering",
+    "description": "This is a subject about software",
+    "assignments": []
+}
