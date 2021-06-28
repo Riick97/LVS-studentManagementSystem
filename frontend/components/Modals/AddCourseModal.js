@@ -81,13 +81,13 @@ function enrollCourse(subjectId) {
     subject.enrolledStudents.push(`${app.currentUser._id}`)
 
 
-    axios.post(`http://localhost:5000/subjects/update/${subject._id}`,
+    axios.post(` /subjects/update/${subject._id}`,
     subject)
     .then(res => {
         console.log(res.data)
     })
 
-    axios.post(`http://localhost:5000/students/update/${app.currentUser._id}`,
+    axios.post(` /students/update/${app.currentUser._id}`,
     app.currentUser)
     .then(res => {
         console.log(res.data)

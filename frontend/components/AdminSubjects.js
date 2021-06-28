@@ -93,7 +93,7 @@ function removeEnrolledSubject(subjectId) {
 function deleteSubject(subjectId) {
     subjects = subjects.filter(subject => subject._id != subjectId);
 
-    axios.delete(`http://localhost:5000/subjects/${subjectId}`)
+    axios.delete(` /subjects/${subjectId}`)
     .then(res => console.log(res.data))
     .catch(err => console.log(err))
 

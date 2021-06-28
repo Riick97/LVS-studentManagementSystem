@@ -55,7 +55,7 @@ function deleteTeacher(teacherId) {
     console.log(`delete ${teacherId}`)
     teachers = teachers.filter(teacher => teacher._id != teacherId);
 
-    axios.delete(`http://localhost:5000/teachers/${teacherId}`)
+    axios.delete(` /teachers/${teacherId}`)
     .then(res => console.log(res.data))
     .catch(err => console.log(err))
 

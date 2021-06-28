@@ -160,7 +160,7 @@ function addUser(form) {
 
         console.log('Student: ', newUser)
 
-        axios.post('http://localhost:5000/students/add', newUser)
+        axios.post(' /students/add', newUser)
         .then(res => {
             data = res.data
             console.log(data)
@@ -175,7 +175,7 @@ function addUser(form) {
     } else {
         newUser.teacherId = id
 
-        axios.post('http://localhost:5000/teachers/add', newUser)
+        axios.post(' /teachers/add', newUser)
         .then(res => {
             data = res.data
             console.log(data)
@@ -289,7 +289,7 @@ function saveEditUser(user) {
 
     //Update user in database
     if (user.type == 'student') {
-        axios.post(`http://localhost:5000/students/update/${currentUser._id}`,
+        axios.post(` /students/update/${currentUser._id}`,
         currentUser)
         .then(res => {
             console.log(res.data)
@@ -311,7 +311,7 @@ function saveEditUser(user) {
 
 
 function updateSubjectDB(subjectId, subject) {
-    axios.post(`http://localhost:5000/subjects/update/${subjectId}`,
+    axios.post(` /subjects/update/${subjectId}`,
         subject)
         .then(res => {
             console.log(res.data)

@@ -33,12 +33,12 @@ function deleteVideo(videoId) {
     videos = videos.filter(video => video._id != videoId);
     app.currentSubject.videos = app.currentSubject.videos.filter(id => id != videoId)
 
-    axios.delete(`http://localhost:5000/videos/${videoId}`)
+    axios.delete(` /videos/${videoId}`)
     .then(res => console.log(res.data))
     .catch(err => console.log(err))
 
 
-    axios.post(`http://localhost:5000/subjects/update/${app.currentSubject._id}`,
+    axios.post(` /subjects/update/${app.currentSubject._id}`,
         app.currentSubject)
         .then(res => {
             console.log(res.data)

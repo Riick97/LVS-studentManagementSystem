@@ -44,7 +44,7 @@ function addVideo(form) {
     }
 
 
-    axios.post('http://localhost:5000/videos/add', newVideo)
+    axios.post(' /videos/add', newVideo)
         .then(res => {
             let data = res.data
             console.log(data)
@@ -54,7 +54,7 @@ function addVideo(form) {
             videos.push(newVideo);
 
             app.currentSubject.videos.push(videoId)
-            axios.post(`http://localhost:5000/subjects/update/${app.currentSubject._id}`,
+            axios.post(` /subjects/update/${app.currentSubject._id}`,
                 app.currentSubject)
                 .then(res => console.log(res.data))
         })

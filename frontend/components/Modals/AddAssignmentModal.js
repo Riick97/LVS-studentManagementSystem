@@ -90,7 +90,7 @@ function saveEditAssignment(assignment) {
     assignment.date = newDate;
 
 
-    axios.post(`http://localhost:5000/subjects/update/${subject._id}`,
+    axios.post(` /subjects/update/${subject._id}`,
         subject)
         .then(res => {
             console.log(res.data)

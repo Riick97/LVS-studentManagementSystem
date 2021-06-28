@@ -92,7 +92,7 @@ function addLecture(form) {
         attendingStudents: attendingStudents,
     }
 
-    axios.post('http://localhost:5000/lectures/add', newLecture)
+    axios.post(' /lectures/add', newLecture)
     .then(res => {
         data = res.data
         console.log(data)
@@ -104,7 +104,7 @@ function addLecture(form) {
         app.currentSubject.lectures.push(lectureId)
         app.update();
 
-        axios.post(`http://localhost:5000/subjects/update/${app.currentSubject._id}`,
+        axios.post(` /subjects/update/${app.currentSubject._id}`,
         app.currentSubject)
         .then(res => {
             console.log(res.data)
@@ -118,11 +118,11 @@ function addLecture(form) {
 function deleteLecture(lectureId) {
     app.currentSubject.lectures = app.currentSubject.lectures.filter(lecture => `${lecture}` != `${lectureId}`)
 
-    axios.delete(`http://localhost:5000/lectures/${lectureId}`)
+    axios.delete(` /lectures/${lectureId}`)
     .then(res => console.log(res.data))
     .catch(err => console.log(err))
 
-    axios.post(`http://localhost:5000/subjects/update/${app.currentSubject._id}`,
+    axios.post(` /subjects/update/${app.currentSubject._id}`,
     app.currentSubject)
     .then(res => {
         console.log(res.data)

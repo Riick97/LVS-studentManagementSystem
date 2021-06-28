@@ -101,7 +101,7 @@ function makeSemester(student, period, subject) {
 }
 
 function updateStudent(id, student) {
-    axios.post(`http://localhost:5000/students/update/${id}`,
+    axios.post(` /students/update/${id}`,
     student)
     .then(res => {
         console.log(res.data)

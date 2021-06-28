@@ -87,7 +87,7 @@ function addAssignment(form) {
     if (!app.currentSubject.assignments) app.currentSubject.assignments = []
     app.currentSubject.assignments.push(newAssignment)
 
-    axios.post(`http://localhost:5000/subjects/update/${app.currentSubject._id}`,
+    axios.post(` /subjects/update/${app.currentSubject._id}`,
     app.currentSubject)
     .then(res => {
         console.log(res.data)
@@ -103,7 +103,7 @@ function deleteAssignment(assignmentId) {
     console.log('assigID: ',assignmentId)
     app.currentSubject.assignments = assignments.filter(assignment => `${assignment._id}` != assignmentId)
 
-    axios.post(`http://localhost:5000/subjects/update/${app.currentSubject._id}`,
+    axios.post(` /subjects/update/${app.currentSubject._id}`,
     app.currentSubject)
     .then(res => {
         console.log(res.data)

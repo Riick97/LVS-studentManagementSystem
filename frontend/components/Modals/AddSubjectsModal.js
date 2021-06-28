@@ -93,7 +93,7 @@ function addSubject(form) {
         assignments: []
     }
 
-    axios.post('http://localhost:5000/subjects/add', newSubject)
+    axios.post(' /subjects/add', newSubject)
     .then(res => {
         let data = res.data
         console.log(data)
@@ -118,7 +118,7 @@ function addSubject(form) {
 }
 
 function updateTeacherDB(teacherId, teacher) {
-    axios.post(`http://localhost:5000/teachers/update/${teacherId}`,
+    axios.post(` /teachers/update/${teacherId}`,
     teacher)
     .then(res => {
         console.log(res.data)
@@ -153,7 +153,7 @@ function saveEditSubject(subjectId) {
     subject.name = newName;
     subject.description = newDescription;
     subject.teachers = newTeachers;
-    axios.post(`http://localhost:5000/subjects/update/${subject._id}`,
+    axios.post(` /subjects/update/${subject._id}`,
         subject)
         .then(res => {
             console.log(res.data)

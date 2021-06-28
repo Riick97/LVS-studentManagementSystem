@@ -136,13 +136,13 @@ function removeEnrolledStudent(studentId) {
     let student = students.find(student => student._id == studentId);
     student.subjects = student.subjects.filter(id => id != app.currentSubject._id);
 
-    axios.post(`http://localhost:5000/subjects/update/${app.currentSubject._id}`,
+    axios.post(` /subjects/update/${app.currentSubject._id}`,
         app.currentSubject)
         .then(res => {
             console.log(res.data)
     })
 
-    axios.post(`http://localhost:5000/students/update/${student._id}`,
+    axios.post(` /students/update/${student._id}`,
         student)
         .then(res => {
             console.log(res.data)

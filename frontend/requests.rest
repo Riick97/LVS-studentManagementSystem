@@ -1,33 +1,33 @@
 ### GET Lectures
-GET http://localhost:5000/lectures
+GET  /lectures
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
 Accept: application/json
 
 ### GET Subjects
-GET http://localhost:5000/subjects
+GET  /subjects
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
 Accept: application/json
 
 
 ### GET Students
-GET http://localhost:5000/students
+GET  /students
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
 Accept: application/json
 
 ### GET Admins
-GET http://localhost:5000/administrators
+GET  /administrators
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
 Accept: application/json
 
 ### GET Teachers
-GET http://localhost:5000/teachers
+GET  /teachers
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
 Accept: application/json
 
 
 
 ### Login Student
-POST http://localhost:5000/auth/login HTTP/1.1
+POST  /auth/login HTTP/1.1
 Content-Type: application/json
 
 {
@@ -36,7 +36,7 @@ Content-Type: application/json
 }
 
 ### Login Teacher
-POST http://localhost:5000/auth/login HTTP/1.1
+POST  /auth/login HTTP/1.1
 Content-Type: application/json
 
 {
@@ -45,7 +45,7 @@ Content-Type: application/json
 }
 
 ###Login Admin
-POST http://localhost:5000/auth/login HTTP/1.1
+POST  /auth/login HTTP/1.1
 Content-Type: application/json
 Accept: application/json
 
@@ -56,7 +56,7 @@ Accept: application/json
 
 
 ### ADD Admin
-POST http://localhost:5000/administrators HTTP/1.1
+POST  /administrators HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
 
@@ -74,7 +74,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpva
 
 
 ### ADD Teacher
-POST http://localhost:5000/teachers/add HTTP/1.1
+POST  /teachers/add HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
 
@@ -91,7 +91,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpva
 }
 
 ### ADD students
-POST http://localhost:5000/students/add HTTP/1.1
+POST  /students/add HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
 
@@ -110,7 +110,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpva
 
 ### ADD subjects
 
-POST http://localhost:5000/subjects/add HTTP/1.1
+POST  /subjects/add HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaGhueVI2MiIsImlhdCI6MTYyNDgzMjM1NywiZXhwIjoxNjI0OTE4NzU3fQ.u8cvA0DV0bvFFaVnG9fZ2AdLB1om3OwJt-UPle_IySo
 

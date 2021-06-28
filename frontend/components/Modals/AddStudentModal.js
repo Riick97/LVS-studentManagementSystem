@@ -78,13 +78,13 @@ function enrollStudent(studentId) {
     let student = students.find(student => student._id == studentId)
     student.subjects.push(app.currentSubject._id)
 
-    axios.post(`http://localhost:5000/subjects/update/${app.currentSubject._id}`,
+    axios.post(` /subjects/update/${app.currentSubject._id}`,
     app.currentSubject)
     .then(res => {
         console.log(res.data)
     })
 
-    axios.post(`http://localhost:5000/students/update/${studentId}`,
+    axios.post(` /students/update/${studentId}`,
     student)
     .then(res => {
         console.log(res.data)

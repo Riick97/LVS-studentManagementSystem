@@ -146,7 +146,7 @@ function saveEditLecture(lectureId) {
     lecture.attendingStudents = [...newStudents];
 
 
-    axios.post(`http://localhost:5000/lectures/update/${lecture._id}`,
+    axios.post(` /lectures/update/${lecture._id}`,
         lecture)
         .then(res => {
             console.log(res.data)
