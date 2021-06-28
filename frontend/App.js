@@ -61,7 +61,7 @@ let app = new App();
 //validateUser()
 setInterval(() => nextSlide(), 10000)
 
-axios.get(`http://localhost:5000/videos`)
+axios.get(`/videos`)
 .then(res => {
     videos = res.data
     //console.log(res.data)
@@ -75,11 +75,11 @@ function getInitialData() {
         axios.defaults.headers.common['Authorization'] = `Bearer ${app.token}`;
         app.authHeader = header
         axios.all([
-            axios.get('http://localhost:5000/lectures/'),
-            axios.get('http://localhost:5000/subjects/'),
-            axios.get('http://localhost:5000/students/'),
-            axios.get('http://localhost:5000/teachers/'),
-            axios.get('http://localhost:5000/administrators/'),
+            axios.get('/lectures/'),
+            axios.get('/subjects/'),
+            axios.get('/students/'),
+            axios.get('/teachers/'),
+            axios.get('/administrators/'),
         ])
         .then(res => {
             lectures = res[0].data

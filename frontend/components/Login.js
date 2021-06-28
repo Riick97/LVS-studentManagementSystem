@@ -36,7 +36,7 @@ function validateUser() {
         password : password
     }
 
-    axios.post(`http://localhost:5000/auth/login`, user)
+    axios.post(`/auth/login`, user)
     .then(async (res) => {
         if (res.status == 200) {
             console.log('user validated')
