@@ -61,7 +61,7 @@ let app = new App();
 //validateUser()
 setInterval(() => nextSlide(), 10000)
 
-axios.get(`/videos`)
+axios.get('/videos/')
 .then(res => {
     videos = res.data
     //console.log(res.data)

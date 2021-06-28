@@ -36,8 +36,9 @@ function validateUser() {
         password : password
     }
 
-    axios.post(`/auth/login`, user)
+    axios.post(`/auth/login/`, user)
     .then(async (res) => {
+        console.log('pressed')
         if (res.status == 200) {
             console.log('user validated')
             console.log({res})
