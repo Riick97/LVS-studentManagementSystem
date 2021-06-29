@@ -1,4 +1,5 @@
-Image
+![alt text](./frontend/img/demo.png)
+
 # What is LVS
 LVS is a very simple student management system 
 It offers the posiblity for students and teachers to interact with eachother
@@ -27,15 +28,13 @@ set random accessToken and refreshToken secret
 ### 3 Start server
 npm start
 
-### 4 Start authorization server
-npm startAuth
-
-### 5 Create a new administrator user(Make sure to have "Rest client" VS code extension)
+### 4 Create a new administrator user(Make sure to have "Rest client" VS code extension)
 Go intro requests.rest and click on send request under ADD Admin header
 You can also run a script using axios to add an admin
 
-### 6 Login and checkout the app
-
-
+### 5 Login and checkout the app
 START SERVER with npm start
-START autServer with npm run startAut
+
+## Link to working demo
+https://studentmanagementsystm.herokuapp.com/#
+Database access is restricted on demo
