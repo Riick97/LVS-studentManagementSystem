@@ -1,7 +1,7 @@
 ![alt text](./frontend/img/demo.png)
 
 # What is LVS
-LVS is a very simple student management system 
+LVS is a very simple fictional student management system 
 It offers the posiblity for students and teachers to interact with eachother
 it has a simple login system on which three types of users can log into
 
